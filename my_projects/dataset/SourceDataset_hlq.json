@@ -1,0 +1,136 @@
+{
+	"name": "SourceDataset_hlq",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "countries/in"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"data": {
+					"type": "object",
+					"properties": {
+						"coordinates": {
+							"type": "object",
+							"properties": {
+								"latitude": {
+									"type": "integer"
+								},
+								"longitude": {
+									"type": "integer"
+								}
+							}
+						},
+						"name": {
+							"type": "string"
+						},
+						"code": {
+							"type": "string"
+						},
+						"population": {
+							"type": "integer"
+						},
+						"updated_at": {
+							"type": "string"
+						},
+						"today": {
+							"type": "object",
+							"properties": {
+								"deaths": {
+									"type": "integer"
+								},
+								"confirmed": {
+									"type": "integer"
+								}
+							}
+						},
+						"latest_data": {
+							"type": "object",
+							"properties": {
+								"deaths": {
+									"type": "integer"
+								},
+								"confirmed": {
+									"type": "integer"
+								},
+								"recovered": {
+									"type": "integer"
+								},
+								"critical": {
+									"type": "integer"
+								},
+								"calculated": {
+									"type": "object",
+									"properties": {
+										"death_rate": {
+											"type": "number"
+										},
+										"recovery_rate": {
+											"type": "number"
+										},
+										"recovered_vs_death_ratio": {
+											"type": "null"
+										},
+										"cases_per_million_population": {
+											"type": "integer"
+										}
+									}
+								}
+							}
+						},
+						"timeline": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"updated_at": {
+										"type": "string"
+									},
+									"date": {
+										"type": "string"
+									},
+									"deaths": {
+										"type": "integer"
+									},
+									"confirmed": {
+										"type": "integer"
+									},
+									"active": {
+										"type": "integer"
+									},
+									"recovered": {
+										"type": "integer"
+									},
+									"new_confirmed": {
+										"type": "integer"
+									},
+									"new_recovered": {
+										"type": "integer"
+									},
+									"new_deaths": {
+										"type": "integer"
+									},
+									"is_in_progress": {
+										"type": "boolean"
+									}
+								}
+							}
+						}
+					}
+				},
+				"_cacheHit": {
+					"type": "boolean"
+				}
+			}
+		}
+	}
+}
