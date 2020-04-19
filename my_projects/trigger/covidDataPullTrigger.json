@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "Pulls data twice daily",
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -17,7 +17,7 @@
 			"recurrence": {
 				"frequency": "Hour",
 				"interval": 12,
-				"startTime": "04/19/2020 10:00 PM",
+				"startTime": "2020-04-19T22:00:00.000Z",
 				"timeZone": "UTC"
 			}
 		}
