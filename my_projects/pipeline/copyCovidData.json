@@ -40,7 +40,15 @@
 									"path": "['Country']"
 								},
 								"sink": {
-									"path": "/Countries/Country"
+									"path": "Country"
+								}
+							},
+							{
+								"source": {
+									"path": "['NewDeaths']"
+								},
+								"sink": {
+									"path": "NewDeaths"
 								}
 							},
 							{
@@ -48,7 +56,7 @@
 									"path": "$['Date']"
 								},
 								"sink": {
-									"path": "/Date"
+									"path": "Date"
 								}
 							}
 						],
