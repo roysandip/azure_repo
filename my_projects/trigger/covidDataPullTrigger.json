@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "Pulls data twice daily",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
