@@ -29,7 +29,8 @@
 					},
 					"sink": {
 						"type": "CosmosDbSqlApiSink",
-						"writeBehavior": "insert"
+						"writeBehavior": "insert",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -40,7 +41,31 @@
 									"path": "['Country']"
 								},
 								"sink": {
-									"path": "Country"
+									"path": "country"
+								}
+							},
+							{
+								"source": {
+									"path": "['CountryCode']"
+								},
+								"sink": {
+									"path": "country_code"
+								}
+							},
+							{
+								"source": {
+									"path": "['NewConfirmed']"
+								},
+								"sink": {
+									"path": "new_confirmed"
+								}
+							},
+							{
+								"source": {
+									"path": "['TotalConfirmed']"
+								},
+								"sink": {
+									"path": "total_confirmed"
 								}
 							},
 							{
@@ -48,15 +73,39 @@
 									"path": "['NewDeaths']"
 								},
 								"sink": {
-									"path": "NewDeaths"
+									"path": "new_deaths"
 								}
 							},
 							{
 								"source": {
-									"path": "$['Date']"
+									"path": "['TotalDeaths']"
 								},
 								"sink": {
-									"path": "Date"
+									"path": "total_deaths"
+								}
+							},
+							{
+								"source": {
+									"path": "['NewRecovered']"
+								},
+								"sink": {
+									"path": "new_recovered"
+								}
+							},
+							{
+								"source": {
+									"path": "['TotalRecovered']"
+								},
+								"sink": {
+									"path": "total_recovered"
+								}
+							},
+							{
+								"source": {
+									"path": "['Date']"
+								},
+								"sink": {
+									"path": "record_updated_on"
 								}
 							}
 						],
