@@ -1,0 +1,25 @@
+{
+	"name": "covidDataPullTrigger",
+	"properties": {
+		"description": "Pulls data twice daily",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyCovidData",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 12,
+				"startTime": "2020-04-19T14:00:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
