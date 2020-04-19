@@ -31,7 +31,29 @@
 						"type": "CosmosDbSqlApiSink",
 						"writeBehavior": "insert"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['CountryCode']"
+								},
+								"sink": {
+									"path": "$['Countries'][0]['CountryCode']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NewDeaths']"
+								},
+								"sink": {
+									"path": "$['Countries'][0]['NewDeaths']"
+								}
+							}
+						],
+						"collectionReference": "$['Countries']"
+					}
 				},
 				"inputs": [
 					{
