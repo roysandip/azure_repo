@@ -15,69 +15,433 @@
 		"schema": {
 			"type": "object",
 			"properties": {
-				"Global": {
-					"type": "object",
-					"properties": {
-						"NewConfirmed": {
-							"type": "integer"
-						},
-						"TotalConfirmed": {
-							"type": "integer"
-						},
-						"NewDeaths": {
-							"type": "integer"
-						},
-						"TotalDeaths": {
-							"type": "integer"
-						},
-						"NewRecovered": {
-							"type": "integer"
-						},
-						"TotalRecovered": {
-							"type": "integer"
-						}
-					}
+				"$schema": {
+					"type": "string"
 				},
-				"Countries": {
+				"$id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"title": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"default": {
+					"type": "object"
+				},
+				"additionalProperties": {
+					"type": "boolean"
+				},
+				"required": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"properties": {
-							"Country": {
-								"type": "string"
-							},
-							"CountryCode": {
-								"type": "string"
-							},
-							"Slug": {
-								"type": "string"
-							},
-							"NewConfirmed": {
-								"type": "integer"
-							},
-							"TotalConfirmed": {
-								"type": "integer"
-							},
-							"NewDeaths": {
-								"type": "integer"
-							},
-							"TotalDeaths": {
-								"type": "integer"
-							},
-							"NewRecovered": {
-								"type": "integer"
-							},
-							"TotalRecovered": {
-								"type": "integer"
-							},
-							"Date": {
-								"type": "string"
+						"type": "string"
+					}
+				},
+				"properties": {
+					"type": "object",
+					"properties": {
+						"Countries": {
+							"type": "object",
+							"properties": {
+								"$id": {
+									"type": "string"
+								},
+								"type": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								},
+								"description": {
+									"type": "string"
+								},
+								"default": {
+									"type": "array"
+								},
+								"examples": {
+									"type": "array",
+									"items": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"NewConfirmed": {
+													"type": "number"
+												},
+												"CountryCode": {
+													"type": "string"
+												},
+												"TotalDeaths": {
+													"type": "number"
+												},
+												"TotalConfirmed": {
+													"type": "number"
+												},
+												"NewDeaths": {
+													"type": "number"
+												},
+												"Slug": {
+													"type": "string"
+												},
+												"NewRecovered": {
+													"type": "number"
+												},
+												"Date": {
+													"type": "string"
+												},
+												"Country": {
+													"type": "string"
+												},
+												"TotalRecovered": {
+													"type": "number"
+												}
+											}
+										}
+									}
+								},
+								"additionalItems": {
+									"type": "boolean"
+								},
+								"items": {
+									"type": "object",
+									"properties": {
+										"$id": {
+											"type": "string"
+										},
+										"type": {
+											"type": "string"
+										},
+										"title": {
+											"type": "string"
+										},
+										"description": {
+											"type": "string"
+										},
+										"default": {
+											"type": "object"
+										},
+										"examples": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"TotalDeaths": {
+														"type": "number"
+													},
+													"TotalConfirmed": {
+														"type": "number"
+													},
+													"Slug": {
+														"type": "string"
+													},
+													"NewDeaths": {
+														"type": "number"
+													},
+													"NewRecovered": {
+														"type": "number"
+													},
+													"Date": {
+														"type": "string"
+													},
+													"Country": {
+														"type": "string"
+													},
+													"TotalRecovered": {
+														"type": "number"
+													},
+													"NewConfirmed": {
+														"type": "number"
+													},
+													"CountryCode": {
+														"type": "string"
+													}
+												}
+											}
+										},
+										"additionalProperties": {
+											"type": "boolean"
+										},
+										"required": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"properties": {
+											"type": "object",
+											"properties": {
+												"Country": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "string"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "string"
+															}
+														}
+													}
+												},
+												"CountryCode": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "string"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "string"
+															}
+														}
+													}
+												},
+												"Slug": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "string"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "string"
+															}
+														}
+													}
+												},
+												"NewConfirmed": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "integer"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "number"
+															}
+														}
+													}
+												},
+												"TotalConfirmed": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "integer"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "number"
+															}
+														}
+													}
+												},
+												"NewDeaths": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "integer"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "number"
+															}
+														}
+													}
+												},
+												"TotalDeaths": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "integer"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "number"
+															}
+														}
+													}
+												},
+												"NewRecovered": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "integer"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "number"
+															}
+														}
+													}
+												},
+												"TotalRecovered": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "integer"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "number"
+															}
+														}
+													}
+												},
+												"Date": {
+													"type": "object",
+													"properties": {
+														"$id": {
+															"type": "string"
+														},
+														"type": {
+															"type": "string"
+														},
+														"title": {
+															"type": "string"
+														},
+														"description": {
+															"type": "string"
+														},
+														"default": {
+															"type": "string"
+														},
+														"examples": {
+															"type": "array",
+															"items": {
+																"type": "string"
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					}
-				},
-				"Date": {
-					"type": "string"
 				}
 			}
 		}
