@@ -37,10 +37,52 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['CountryCode']"
-								},
-								"sink": {
-									"path": "$['Countries'][0]['Country']"
+									"path": "['Country']"
+								}
+							},
+							{
+								"source": {
+									"path": "['CountryCode']"
+								}
+							},
+							{
+								"source": {
+									"path": "['Slug']"
+								}
+							},
+							{
+								"source": {
+									"path": "['NewConfirmed']"
+								}
+							},
+							{
+								"source": {
+									"path": "['TotalConfirmed']"
+								}
+							},
+							{
+								"source": {
+									"path": "['NewDeaths']"
+								}
+							},
+							{
+								"source": {
+									"path": "['TotalDeaths']"
+								}
+							},
+							{
+								"source": {
+									"path": "['NewRecovered']"
+								}
+							},
+							{
+								"source": {
+									"path": "['TotalRecovered']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Date']"
 								}
 							}
 						],
