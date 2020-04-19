@@ -50,6 +50,14 @@
 								"sink": {
 									"path": "$['Countries'][0]['NewDeaths']"
 								}
+							},
+							{
+								"source": {
+									"path": "$['Date']"
+								},
+								"sink": {
+									"path": "$['Countries'][0]['Date']"
+								}
 							}
 						],
 						"collectionReference": "$['Countries']"
