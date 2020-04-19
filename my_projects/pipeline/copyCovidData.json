@@ -56,7 +56,7 @@
 									"path": "$['Date']"
 								},
 								"sink": {
-									"path": "$['Countries']['Date']"
+									"path": "$['Countries'].['Date']"
 								}
 							}
 						],
