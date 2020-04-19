@@ -38,51 +38,17 @@
 							{
 								"source": {
 									"path": "['Country']"
-								}
-							},
-							{
-								"source": {
-									"path": "['CountryCode']"
-								}
-							},
-							{
-								"source": {
-									"path": "['Slug']"
-								}
-							},
-							{
-								"source": {
-									"path": "['NewConfirmed']"
-								}
-							},
-							{
-								"source": {
-									"path": "['TotalConfirmed']"
-								}
-							},
-							{
-								"source": {
-									"path": "['NewDeaths']"
-								}
-							},
-							{
-								"source": {
-									"path": "['TotalDeaths']"
-								}
-							},
-							{
-								"source": {
-									"path": "['NewRecovered']"
-								}
-							},
-							{
-								"source": {
-									"path": "['TotalRecovered']"
+								},
+								"sink": {
+									"path": "/Countries/Country"
 								}
 							},
 							{
 								"source": {
 									"path": "$['Date']"
+								},
+								"sink": {
+									"path": "/Date"
 								}
 							}
 						],
