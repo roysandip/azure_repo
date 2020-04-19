@@ -40,7 +40,7 @@
 									"path": "$['CountryCode']"
 								},
 								"sink": {
-									"path": "$['Countries']['CountryCode']"
+									"path": "$['Countries'].['CountryCode']"
 								}
 							},
 							{
@@ -48,7 +48,7 @@
 									"path": "$['NewDeaths']"
 								},
 								"sink": {
-									"path": "$['Countries']['NewDeaths']"
+									"path": "$['Countries'].['NewDeaths']"
 								}
 							},
 							{
