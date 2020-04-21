@@ -1,5 +1,5 @@
 {
-	"name": "copyCovidData",
+	"name": "IngestCovidData",
 	"properties": {
 		"activities": [
 			{
@@ -114,13 +114,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "CovidJsonData",
+						"referenceName": "InputCovidDataREST",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "CovidCosmosDbSqlApiCollection",
+						"referenceName": "TargetCovidDataCosmosDB",
 						"type": "DatasetReference"
 					}
 				]

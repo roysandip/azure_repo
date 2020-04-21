@@ -1,5 +1,5 @@
 {
-	"name": "CovidJsonData",
+	"name": "InputCovidDataREST",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "HttpServer1",

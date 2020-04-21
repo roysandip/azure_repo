@@ -1,5 +1,5 @@
 {
-	"name": "CovidCosmosDbSqlApiCollection",
+	"name": "TargetCovidDataCosmosDB",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "CosmosDb1",
